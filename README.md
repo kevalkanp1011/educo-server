@@ -9,6 +9,14 @@
 3. Reset Password: /api/user/reset_password
 4. Authenticate: /api/user/authenticate
 
+| Name | Routes |
+| ------ | ------ |
+| SignUp User | [/api/user/create][PlDb] |
+| SignIn User | [/api/user/login][PlGh] |
+| Reset Password | [/api/user/reset_password][PlGd] |
+| Authenticate | [/api/user/authenticate][PlOd] |
+
+
 ## Profile API
 5. Update User: /api/user/update
 6. Get Courses For Profile: /api/user/profile/courses
