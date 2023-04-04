@@ -7,6 +7,8 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import live.kevalkanpariya.plugins.*
+import live.kevalkanpariya.util.security.token.JwtTokenService
+import live.kevalkanpariya.util.security.token.TokenConfig
 
 
 fun main(args: Array<String>): Unit =
@@ -14,11 +16,11 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
+
     configureKoin()
     configureAuth()
     configureRouting()
     configureSerialization()
     configureMonitoring()
-    configureSession()
 }
 

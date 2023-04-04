@@ -12,6 +12,8 @@ plugins {
     id("org.jetbrains.kotlin.plugin.serialization") version "1.7.22"
 }
 
+
+
 group = "live.kevalkanpariya"
 version = "0.0.1"
 application {
@@ -26,10 +28,10 @@ tasks {
     create("stage").dependsOn("installDist")
 }
 
-tasks.withType<
-        org.jetbrains.kotlin.gradle.tasks.KotlinCompile>() {
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
+
 
 repositories {
     mavenCentral()
@@ -37,7 +39,6 @@ repositories {
 
 dependencies {
     implementation("io.ktor:ktor-server-core-jvm:$ktor_version")
-
     implementation("io.ktor:ktor-server-sessions-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-host-common-jvm:$ktor_version")
     implementation("io.ktor:ktor-server-status-pages-jvm:$ktor_version")
@@ -47,7 +48,12 @@ dependencies {
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 
-    implementation ("io.ktor:ktor-server-call-logging:$ktor_version")
+    implementation("io.ktor:ktor-server-call-logging:$ktor_version")
+
+    implementation("io.ktor:ktor-server-auth-jwt-jvm:$ktor_version")
+
+    implementation("io.ktor:ktor-server-cors-jvm:$ktor_version")
+
 
     // Auth
     implementation("io.ktor:ktor-server-auth-jvm:$ktor_version")
@@ -65,21 +71,30 @@ dependencies {
     implementation("io.insert-koin:koin-ktor:$koinVersion")
     implementation("io.insert-koin:koin-logger-slf4j:$koinVersion")
 
-    // Google Client API Library
-    implementation("com.google.api-client:google-api-client:2.1.1")
+
     //mongoDB JAVA ReactiveStream Driver
     implementation("org.mongodb:mongodb-driver-reactivestreams:4.8.0")
-
-    //Reactor Core Flux
-    implementation("io.projectreactor:reactor-core:3.5.1")
-    testImplementation("io.projectreactor:reactor-test:3.5.1")
+    
 
 
     // AWS
     implementation(platform("software.amazon.awssdk:bom:$AWS_VERSION"))
     implementation("software.amazon.awssdk:s3")
 
+    //Coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+
+
+    // Koin
+    testImplementation("io.insert-koin:koin-test:$koinVersion")
+    // Ktor Test
+    testImplementation("io.ktor:ktor-server-tests:$ktor_version")
+    // Kotlin Test
+    testImplementation("org.jetbrains.kotlin:kotlin-test:$kotlin_version")
+    // Truth
+    testImplementation("com.google.truth:truth:1.1.3")
 
 
 
 }
+
