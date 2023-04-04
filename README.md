@@ -3,13 +3,13 @@
 
 #Routes
 
-// Auth API
--2. SignUp User : /api/user/create
--1. SignIn User: /api/user/login
-0. Reset Password: /api/user/reset_password
+## Auth API
+*. SignUp User : /api/user/create
+-*. SignIn User: /api/user/login
+*. Reset Password: /api/user/reset_password
 1. Authenticate: /api/user/authenticate
 
-// Profile API
+## Profile API
 2. Update User: /api/user/update
 3. Get Courses For Profile: /api/user/profile/courses
 4. Get Authenticated User Profile: /api/user/profile
@@ -20,7 +20,7 @@
 9. unFollow User: /api/user/unfollow
 10. Get User Information: /api/get/users
 
-// Course API
+## Course API
 11. Search Courses: /api/user/search/courses
 12. Bookmark Courses: /api/user/bookmark/courses
 13. Create Bookmark: /api/user/bookmark/create
