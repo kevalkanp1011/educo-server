@@ -1,7 +1,7 @@
 
 # Educo Server
 
-*Routes
+#Routes
 
 // Auth API
 1. SignUp User : /api/user/create
