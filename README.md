@@ -9,12 +9,12 @@
 3. Reset Password: /api/user/reset_password
 4. Authenticate: /api/user/authenticate
 
-| Name | Routes |
+| Route | Response |
 | ------ | ------ |
-| SignUp User | [/api/user/create][PlDb] |
-| SignIn User | [/api/user/login][PlGh] |
-| Reset Password | [/api/user/reset_password][PlGd] |
-| Authenticate | [/api/user/authenticate][PlOd] |
+| /api/user/create | BasicApiResponse<Unit> |
+| /api/user/login | BasicApiResponse<AuthResponse> |
+| /api/user/reset_password | BasicApiResponse<Unit> |
+| /api/user/authenticate |  |
 
 
 ## Profile API
