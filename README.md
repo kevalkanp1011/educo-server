@@ -4,10 +4,10 @@
 #Routes
 
 // Auth API
-1. SignUp User : /api/user/create
-2. SignIn User: /api/user/login
-3. Reset Password: /api/user/reset_password
-4. Authenticate: /api/user/authenticate
+01. SignUp User : /api/user/create
+02. SignIn User: /api/user/login
+03. Reset Password: /api/user/reset_password
+04. Authenticate: /api/user/authenticate
 
 // Profile API
 2. Update User: /api/user/update
