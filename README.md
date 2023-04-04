@@ -11,7 +11,7 @@
 
 | Route | Response |
 | ------ | ------ |
-| /api/user/create | [BasicApiResponse<Unit>] |
+| /api/user/create | BasicApiResponse<Unit> |
 | /api/user/login | BasicApiResponse<AuthResponse> |
 | /api/user/reset_password | BasicApiResponse<Unit> |
 | /api/user/authenticate |  |
