@@ -4,17 +4,13 @@
 ## Routes
 
 ## Auth API
-1. SignUp User : /api/user/create
-2. SignIn User: /api/user/login
-3. Reset Password: /api/user/reset_password
-4. Authenticate: /api/user/authenticate
 
 | Route | Response |
-| ------ | ------ |
+| ------------- |:-------------:|
 | /api/user/create | BasicApiResponse<Unit> |
 | /api/user/login | BasicApiResponse<AuthResponse> |
 | /api/user/reset_password | BasicApiResponse<Unit> |
-| /api/user/authenticate |  |
+| /api/user/authenticate | BasicApiResponse<Unit> |
 
 
 ## Profile API
